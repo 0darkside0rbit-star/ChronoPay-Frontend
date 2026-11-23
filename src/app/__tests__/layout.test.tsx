@@ -15,6 +15,7 @@ vi.mock('next/headers', () => ({
 // Mock dependencies to avoid complex context setup errors in tests
 vi.mock('@/hooks/use-toast', () => ({
   ToastProvider: ({ children }: { children: React.ReactNode }) => <div data-testid="toast-provider">{children}</div>,
+  useToast: () => ({ toast: vi.fn() }),
 }));
 vi.mock('@/app/components/ui/toast-container', () => ({
   ToastContainer: () => <div data-testid="toast-container" />,
