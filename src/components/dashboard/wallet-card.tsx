@@ -14,6 +14,7 @@ import { useToast } from "@/hooks/use-toast";
 import { useRovingTabs } from "@/hooks/use-roving-tabs";
 import { useLocale } from "@/lib/i18n";
 import { glossary } from "@/lib/glossary";
+import { truncateMiddle } from "@/lib/format-address";
 import { useNetwork, TestnetRibbon } from "@/components/checkout/NetworkSelector";
 
 const WalletConnectModal = dynamic(
@@ -464,7 +465,7 @@ export function WalletCard({
                 </dt>
                 <dd className="flex items-center gap-2 font-mono text-white text-xs">
                   <span className="truncate">
-                    {activeWallet.address.slice(0, 8)}…{activeWallet.address.slice(-6)}
+                    {truncateMiddle(activeWallet.address, 8, 6)}
                   </span>
                   <CopyButton
                     text={activeWallet.address}
