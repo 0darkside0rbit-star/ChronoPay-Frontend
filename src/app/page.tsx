@@ -42,21 +42,6 @@ const features = [
 export default function Home() {
   return (
     <div className="min-h-screen bg-zinc-950 text-zinc-100 font-sans">
-      <header className="mx-auto flex max-w-5xl flex-wrap items-center justify-between gap-3 px-6 pt-6">
-        <span className="text-lg font-semibold tracking-tight">ChronoPay</span>
-        <nav aria-label="Primary" className="flex items-center gap-5 text-sm text-zinc-300">
-          <a href="/marketplace" className="hover:text-white">Marketplace</a>
-          <a href="/pricing" className="hover:text-white">Pricing</a>
-          <a
-            href="https://github.com/Chronopay-Org/ChronoPay-Frontend"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="rounded-full border border-white/15 px-3 py-1 hover:border-white/30 hover:text-white"
-          >
-            GitHub
-          </a>
-        </nav>
-      </header>
       <main id="main-content" className="mx-auto max-w-5xl px-6 pb-20 pt-12">
         <p className="text-sm font-medium uppercase tracking-widest text-cyan-400">
           Time Economy
