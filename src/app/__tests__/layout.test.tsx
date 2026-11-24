@@ -24,8 +24,13 @@ vi.mock('@/app/components/ui/toast-container', () => ({
 vi.mock('@/app/components/navigation/RoleContext', () => ({
   RoleProvider: ({ children }: { children: React.ReactNode }) => <div data-testid="role-provider">{children}</div>,
 }));
+const mockUseMessages = vi.fn((key: string) =>
+  key === 'common.skipToContent' ? 'Localized skip link' : key,
+);
+
 vi.mock('@/lib/i18n', () => ({
   I18nProvider: ({ children }: { children: React.ReactNode }) => <div data-testid="i18n-provider">{children}</div>,
+  useMessages: () => mockUseMessages,
 }));
 
 describe('RootLayout', () => {

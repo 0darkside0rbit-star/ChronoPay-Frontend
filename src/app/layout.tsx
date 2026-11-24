@@ -87,13 +87,6 @@ export default async function RootLayout({
           }}
         />
 
-        <a
-          href="#main-content"
-          className="sr-only focus:not-sr-only focus:fixed focus:inset-inline-start-4 focus:top-4 focus:z-50 focus:rounded focus:bg-cyan-500 focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-slate-950 focus:outline-none focus:ring-2 focus:ring-cyan-300"
-        >
-          Skip to content
-        </a>
-
         <ToastProvider>
           <NotificationsProvider>
             <I18nProvider>
